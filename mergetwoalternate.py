@@ -1,11 +1,11 @@
 a = "abc"
-b = "defqq"
+b = "def"
 i =0
-result=[]
+result =""
 while i<len(a) or i<len(b):
     if i<len(a):
-        result.append(a[i])
+        result=result+a[i]
     if i<len(b):
-        result.append(b[i])
+        result = result + b[i]
     i+=1
-print(''.join(result))
+print(result)
