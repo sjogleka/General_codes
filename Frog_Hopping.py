@@ -7,7 +7,6 @@ def minJumps(arr, n):
             jumps[i] = float('inf')
         elif (arr[i] >= n - i - 1):
             jumps[i] = 1
-
         else:
             min = float('inf')
             for j in range(i + 1, n):
