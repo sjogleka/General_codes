@@ -51,11 +51,11 @@ if __name__ == '__main__':
     root.left.left.right = Node(10)
     traverse = bfs()
     t = traverse.oddsum(root)
-    #print(t)
+    print(t)
 
     traverse2 = bfs2()
     t = traverse2.traverser2(root)
-    print(t)
+    #print(t)
 
 '''
     res = [[]]
