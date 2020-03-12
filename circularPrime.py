@@ -1,6 +1,9 @@
 def findPrime(start,end):
     res =[]
     for val in range(start,end+1):
+        temp = str(val)
+        if int(temp[0])%2==0 or int(temp[-1])%2==0:
+            continue
         if val>1:
             for n in range(2,val):
                 if val%n==0:
@@ -30,3 +33,4 @@ if __name__ == '__main__':
             res.append(op[i])
 
     print(res)
+    print(len(res))
