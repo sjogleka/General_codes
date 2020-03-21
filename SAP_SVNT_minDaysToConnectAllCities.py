@@ -48,7 +48,8 @@ def minDays(grid,visited,output):
 
 if __name__ == '__main__':
     #g = [['$', '.', '.', '#'],['.', '.', '#', '.'],['#', '.', '$', '.'],['$', '.', '.', '.']]
-    g = [['$','#'],['$','.']]
+    g = [['$', '.', '.', '#'],['.', '.', '#', '.'],['#', '.', '$', '.'],['.', '.', '.', '.']]
+    #g = [['$','#'],['$','.']]
     visited = [[False for i in range(len(g))] for i in range(len(g[0]))]
     output = [[-1 for i in range(len(g))] for i in range(len(g[0]))]
     src= []
