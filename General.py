@@ -142,12 +142,30 @@ class LinkedList:
 
         print("Middle Element: -",slow.val)
 
+
+def Sum35():
+    t = int(input().strip())
+    for a0 in range(t):
+        n = int(input().strip())
+        i = 1
+        sum = 0
+        while (i < n):
+            mof3 = 3 * i
+            mof5 = 5 * i
+            if mof3 < n:
+                sum = sum + mof3
+            if mof5 < n and mof5 % 3 != 0:
+                sum = sum + mof5
+            i = i + 1
+        print(sum)
+
 if __name__ == '__main__':
     #findFirst1([0, 0, 0, 0, 0, 0, 1, 1, 1, 1],1)
     #findFisrtANdLast([5,7,7,8,8,10],8)
     #findFisrtANdLast([5, 7, 7, 8, 8, 10,10,10,10,10,11,13,15], 10)
     #findFisrtANdLast([5, 7, 7, 8, 8, 10, 10, 10, 10, 11, 13, 15], 16)
     #findFisrtANdLast([5,7,7,8,8,10], 6)
+    '''
     root = Node1(1)
     root.left = Node1(2)
     root.right = Node1(3)
@@ -157,10 +175,7 @@ if __name__ == '__main__':
     root.right.right = Node1(7)
     root.right.left.left = Node1(8)
     inetraverse(root)
-
-    #bfs(root)
-
-
+    #bfs(root)'''
     '''
     l = LinkedList()
     l.push(2)
@@ -174,9 +189,10 @@ if __name__ == '__main__':
     l.reverseLL()
     l.printAll()
     l.middle()
-
-    '''
-
-
+    
     print(over1(1,3,3))
     print(over1(1, 3, 3,4))
+    '''
+
+    Sum35()
+
