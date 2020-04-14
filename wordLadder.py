@@ -19,7 +19,7 @@ import collections
                         q.append((neighbor, k+1))
             print(q)
         return 0 
-'''
+
 def ladderLength(beginWord, endWord, wordList):
     d = collections.defaultdict(list)
 
@@ -52,4 +52,64 @@ def ladderLength(beginWord, endWord, wordList):
 
 
 print(ladderLength("hit","cog",["hot","dot","dog","lot","log","cog"]))
+
+'''
+import collections
+
+def ladderLength(beginWord,endWord,wordList):
+    d = collections.defaultdict(list)
+
+    for i in range(len(wordList)):
+        for j in range(len(wordList[i])):
+            temp = wordList[i]
+            d[temp[:j]+'*'+temp[j+1:]].append(temp)
+    #print(d)
+
+    visited =set()
+
+    q =collections.deque()
+    q.append((beginWord,1))
+
+    while q:
+        data, level = q.popleft()
+        if data==endWord:
+            return level
+        #print(data, level)
+
+        if data not in visited:
+            visited.add(data)
+            for i in range(len(data)):
+                temp = data[:i]+'*'+data[i+1:]
+                #print(temp,q)
+                for element in d[temp]:
+                    q.append((element,level+1))
+
+    return 0
+
+if __name__ == '__main__':
+    beginWord = "hit"
+    endWord = "cog"
+    wordList = ["hot", "dot", "dog", "lot", "log", "cog"]
+    #print(beginWord)
+    print(ladderLength(beginWord,endWord,wordList))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
