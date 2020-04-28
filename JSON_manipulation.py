@@ -15,6 +15,26 @@ print(res)
 print(sorted(res))
 '''
 
+data = json.load(open('read_json.json','r'))
+
+print(data)
+source = data['origin_addresses'][0]
+destinations = data['destination_addresses']
+entries = data['rows'][0]['elements']
 
 
+#print(source)
+#print(destinations,len(destinations))
+#print(entries,len(entries))
+
+
+res= []
+for i in range(len(destinations)):
+    res.append((destinations[i],entries[i]['distance']['text'],entries[i]['duration']['text']))
+print("Source\t\t\t\t Destination\t\t\t\t Distance\t\t\t\t Duration")
+for i in range(len(res)):
+    temp  = res[i][0].split(',')
+    temp = ','.join(temp[:-1])
+    #print(temp)
+    print(','.join(source.split(',')[:-1]),"\t",temp,"\t\t",res[i][1],"\t\t",res[i][2])
 
