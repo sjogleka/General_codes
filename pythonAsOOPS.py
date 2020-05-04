@@ -46,4 +46,6 @@ if __name__ == '__main__':
     b.method1(2,3)
     c.method1(2,1,4)
     e.method1(1,2,3)
-
+    print("Type of A",type(a))
+    print("Class of A", type(a).__class__)
+    print("MRO(Method Resolution Order): -", type(a).mro())

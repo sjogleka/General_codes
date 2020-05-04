@@ -194,5 +194,11 @@ if __name__ == '__main__':
     print(over1(1, 3, 3,4))
     '''
 
-    Sum35()
+    #Sum35()
+
+    d= {True:"yes",1.0:"maybe",1:"no"}
+    print(d)
+    d = {True: "yes", 1: "no", 1.0: "maybe"}
+    print(d)
+
 
