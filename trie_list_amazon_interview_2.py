@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
     #Follow-up1
     print("............................................")
-    temp = set(givenList)
+    #temp = set(givenList)
     start = timeit.default_timer()
     op2 = findInSet(set(givenList),keyword)
     print("Keyword is present - ",keyword) if op2 else print("Not Found!")

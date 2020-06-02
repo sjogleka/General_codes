@@ -1,3 +1,6 @@
+import sys
+import json
+
 def findFirst1(arr,tatget):
     def helper(start,end,target):
         mid = (start+end)//2
@@ -192,13 +195,40 @@ if __name__ == '__main__':
     
     print(over1(1,3,3))
     print(over1(1, 3, 3,4))
-    '''
+    
 
     #Sum35()
-
+    
     d= {True:"yes",1.0:"maybe",1:"no"}
     print(d)
     d = {True: "yes", 1: "no", 1.0: "maybe"}
     print(d)
+    '''
+
+    print(sys.hash_info.width)
 
 
+
+    data = [["1","ABC","2"],["2","EFG",""]]
+    data = [["1", "john", "2"], ["2", "Ben"],["3","json","1"],["4","Bryan","2"]]
+
+    #list = [{"id": x[0], "name": x[1], "manager_id":None if not x[2] else x[2]} for x in data]
+    from collections import defaultdict
+    res= []
+    for i in range(len(data)):
+        k = ["id","name","manager_id"]
+        d = {}
+        for j in range(len(k)):
+            if j>=len(data[i]):
+                d[k[j]] = None
+            else:
+                if type(data[i][j]) == int:
+                    d[k[j]] = int(data[i][j])
+                else:
+                    d[k[j]] = data[i][j]
+        #print(d)
+        res.append(d)
+
+    #print(res)
+
+    print(json.dumps(res))
