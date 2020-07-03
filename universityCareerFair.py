@@ -10,5 +10,6 @@ def universityCareerFair(arrival, duration):
     return ans
 
 
-print(universityCareerFair([1,3,5],[2,2,2]))
+#print(universityCareerFair([1,3,5],[2,2,2]))
+print(universityCareerFair([1,3,3,5,7],[2,2,1,2,1]))
 print(universityCareerFair([1],[5]))
