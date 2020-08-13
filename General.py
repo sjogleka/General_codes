@@ -204,7 +204,7 @@ if __name__ == '__main__':
     d = {True: "yes", 1: "no", 1.0: "maybe"}
     print(d)
     '''
-
+    '''
     print(sys.hash_info.width)
 
 
@@ -232,3 +232,70 @@ if __name__ == '__main__':
     #print(res)
 
     print(json.dumps(res))
+
+    def fibo(n):
+        if n ==0:
+            return 0
+        if n ==1:
+            return 1
+        else:
+            return fibo(n-1) + fibo(n-2)
+
+    print(fibo(10))
+
+    n = 5
+    for i in range(n):
+        for j in range(n):
+            if (i+j)%2 ==0:
+                print("W ",end="")
+            else:
+                print("B ", end= " ")
+        print()
+
+
+    def check(strList, sub_str):
+        sub_list = sub_str.split(" ")
+        str = strList.split(" ")
+        print(sub_list)
+        for s in str:
+            if s in sub_list:
+                print("YES" + " ")
+            else:
+                print("NO")
+
+                # driver code
+
+
+    #string = "random for geeks abc efg geeks"
+    #sub_str = "geek for abc"
+
+    string =""
+    for i in range(3-1):
+        string+=input()
+    string+=input()
+    print(string)
+    sub_str = "CAT TOM ADO MOM CDM"
+    check(string, sub_str)
+
+    '''
+    '''
+    def maxDiff(arr_size,arr):
+        if arr_size<1:
+            return 0
+
+        max_diff, min_ele = arr[0],float('inf')
+
+        for i in range(arr_size):
+            min_ele = min(min_ele,arr[i])
+            diff = arr[i] - min_ele
+            max_diff = max(max_diff,diff)
+
+        return max(0,max_diff)
+
+    n = int(input())
+    lst = list(map(int,input().split()))
+    print(n,maxDiff(n,lst))
+    '''
+    print(maxDiff(7,[2,3,10,6,4,8,1]))
+    arr_size =
+
