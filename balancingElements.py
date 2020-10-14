@@ -40,6 +40,41 @@ def balancingElements(arr):
 
     print(count)
 
+'''
+def balancingElements(arr):
+    n = len(arr)
+    count = 0
+    leftOdd= [0]*len(arr)
+    leftEven = [0] * len(arr)
+    rightOdd = [0]*len(arr)
+    rightEven = [0]*len(arr)
+    odd = 0
+    even= 0
+    for i in range(n):
+        leftOdd[i] = odd
+        leftEven[i] = even
+        if i%2==0:
+            even+=arr[i]
+        else:
+            odd+=arr[i]
+
+    for i in range(n-1,-1,-1):
+        rightOdd[i] = odd
+        rightEven[i] = even
+
+        if i%2==0:
+            even+=arr[i]
+        else:
+            odd+=arr[i]
+
+
+    for i in range(n):
+        if leftOdd[i]+rightEven[i] == leftEven[i]+rightOdd[i]:
+            count+=1
+
+    return count
+'''
+
 
 
 if __name__ == '__main__':

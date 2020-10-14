@@ -20,7 +20,7 @@ def permute(nums):
     else:
         return "NO"
 
-def checkDivisibility(arr):
+def checkDivisibility_1(arr):
     op = []
     for i in range(len(arr)):
         arr[i]  = list(map(int, str(arr[i])))
@@ -28,6 +28,13 @@ def checkDivisibility(arr):
 
     return op
 
+
+def checkDivisibility(arr):
+    result = [''] * len(arr)
+    for i in range(len(arr)):
+        result[i] = solve(arr[i])
+
+    return result
 
 def solve(num):
     number = str(num)
@@ -65,6 +72,14 @@ def solve(num):
 
 
 if __name__ == '__main__':
-    print(checkDivisibility([61,75,0]))
+    print(checkDivisibility_1([61,75,0]))
+    #print(solve(75))
+    #print(solve(2729898085))
+    #arr = [123, 1312, 777777, 7001]
+    arr = [41,2729898085]
+    #arr = [8,86,656411992834780769]
+    print(checkDivisibility(arr))
+
+    #print(result)
 
     print()
